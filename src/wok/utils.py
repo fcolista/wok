@@ -21,6 +21,7 @@
 #
 
 import cherrypy
+import commands
 import glob
 import grp
 import inspect
@@ -56,6 +57,8 @@ def is_digit(value):
     else:
         return False
 
+def is_openrc():
+    return True if "OpenRC" in commands.getoutpt("/sbin/rc -V") else False
 
 def _load_plugin_conf(name):
     plugin_conf = PluginPaths(name).conf_file
