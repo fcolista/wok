@@ -23,6 +23,7 @@ SUBDIRS = DEBIAN
 
 EXTRA_DIST = \
 	check_i18n.py \
+	wokd.openrc \
 	wokd.sysvinit \
 	wokd.service.systemd \
 	wok.spec.fedora.in \
